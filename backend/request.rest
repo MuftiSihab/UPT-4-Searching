@@ -1,0 +1,96 @@
+//Create An User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Wajib Pajak",
+    "email": "wp4@gmail.com",
+    "password": "123456",
+    "confPassword" : "123456",
+    "role": "user"
+}
+
+###
+//Get All User
+GET http://localhost:5000/users
+
+###
+//Get Single User
+GET http://localhost:5000/users/ea6e9188-64bc-49a7-a4bc-1b1e9260fefa
+
+###
+//Update User
+PATCH http://localhost:5000/users/6596ec6f-aeca-4b25-a616-34d51c62cb60
+Content-Type: application/json
+
+{
+    "name": "Wajib Pajak",
+    "email": "wp4@gmail.com",
+    "password": "",
+    "confPassword" : "",
+    "role": "user"
+}
+
+####
+//Delete User
+DELETE http://localhost:5000/users/0591ad03-04de-4184-8fa3-dc611c792cec
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "sihab4@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+//Logout User
+DELETE http://localhost:5000/logout HTTP/1.1
+
+###
+//Get a product
+GET http://localhost:5000/products?search_query=Makmur&page=0&limit=10
+
+###
+//product by id
+GET http://localhost:5000/products/a5d2f74d-b573-41b3-83e3-fcd3ef0e5c38
+
+###
+//post data porduct
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "nopel": "kouj2744156",
+    "name": "Subakti",
+    "nop": "36.19.160.005.003-0567.0",
+    "lt": 500,
+    "lb": 100,
+    "kec": "Pakuhaji",
+    "tahapan": "Berkas diperiksa pendata",
+    "ket": "tidak ada"
+}
+
+###
+//Update Product
+PATCH  http://localhost:5000/products/a5d2f74d-b573-41b3-83e3-fcd3ef0e5c38
+Content-Type: application/json
+
+{
+    "nopel": "wiuj2744156",
+    "name": "Eliyana",
+    "nop": "36.19.160.005.003-0123.0",
+    "lt": 200,
+    "lb": 100,
+    "kec": "Kosambi",
+    "tahapan": "Berkas diperiksa pendata",
+    "ket": "tidak ada"
+}
+
+###
+DELETE   http://localhost:5000/products/a5d2f74d-b573-41b3-83e3-fcd3ef0e5c38
